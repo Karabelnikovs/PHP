@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <script src="chat.js"></script>
+</head>
+<style>
+    .container{
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type="submit"] {
+        padding:5px;
+        background-color: black;
+        color:white;
+        margin-top:10px;
+        border-radius: 50px;
+        transition: scale 0.2 ease;
+        width: 100px;
+    }
+    input:hover[type="submit"] {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        scale:1.05;
+    }
+    input:active[type="submit"] {
+        scale:0.95;
+    }
+    textarea{
+        height:100px;
+        width: 170px;
+    }
+    #chats{
+        width: 100vw;
+        height: 50vh;
+    }
+</style>
+<body>
+    <div class='container'>
+        <form action="chat.php" method="post" onsubmit="FetchPHP(event)">
+            <label for="nicknam">Nickname: </label><br>
+            <input type="text" id="forma" name="nickname"><br>
+            <label for="chat">Chat: </label><br>
+            <textarea id="forma" name="chat" ></textarea><br>
+            <input type="submit" value="Submit" id="poga"><br>
+            
+        </form>
+        </div>
+        <ul id='chats'>
+
+        </ul>
+</body>
+</html>
